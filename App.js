@@ -1,20 +1,51 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import SignupScreen from './src/components/SignupScreen';
+import LoginScreen from './src/components/LoginScreen';
+import ForgotPasswordScreen from './src/components/ForgotPasswordScreen';
+import SendOtpScreen from './src/components/SendOtpScreen';
+import ResetPassword from './src/components/ResetPassword';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+const Stack = createStackNavigator();
+
+const App = () => {
+  return (  
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Signup">
+        <Stack.Screen
+          name="Signup"
+          component={SignupScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false }}
+          
+        />
+        <Stack.Screen
+          name="ForgotPassword"
+          component={ForgotPasswordScreen}
+          options={{ headerShown: false }}
+          
+        />
+        <Stack.Screen
+          name="Sendotp"
+          component={SendOtpScreen}
+          options={{ headerShown: false }}
+          
+        />
+
+<Stack.Screen
+          name="ResetPassword"
+          component={ResetPassword}
+          options={{ headerShown: false }}
+          
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
