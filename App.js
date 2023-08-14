@@ -6,6 +6,7 @@ import LoginScreen from './src/components/LoginScreen';
 import ForgotPasswordScreen from './src/components/ForgotPasswordScreen';
 import SendOtpScreen from './src/components/SendOtpScreen';
 import ResetPassword from './src/components/ResetPassword';
+import Profilepage from './src/components/Profilepage';
 
 const Stack = createStackNavigator();
 
@@ -40,6 +41,12 @@ const App = () => {
 <Stack.Screen
           name="ResetPassword"
           component={ResetPassword}
+          options={{ headerShown: false }}
+          
+        />
+        <Stack.Screen
+          name="profile"
+          component={Profilepage}
           options={{ headerShown: false }}
           
         />
