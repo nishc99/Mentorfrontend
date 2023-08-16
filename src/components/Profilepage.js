@@ -1,3 +1,5 @@
+//without json data
+
 // import React from 'react';
 // import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native';
 
@@ -506,6 +508,7 @@
 
 // export default Profilepage;
 
+// Through json data
 
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native';
