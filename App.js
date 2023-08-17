@@ -7,13 +7,17 @@ import ForgotPasswordScreen from './src/components/ForgotPasswordScreen';
 import SendOtpScreen from './src/components/SendOtpScreen';
 import ResetPassword from './src/components/ResetPassword';
 import Profilepage from './src/components/Profilepage';
+import Profilesetup1 from './src/components/Profilesetup1';
+import ProfileSetuppage from './src/components/ProfileSetuppage';
+import Educational from './src/components/Educational';
+import Professional from './src/components/Professional';
 
 const Stack = createStackNavigator();
 
 const App = () => {
   return (  
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="profile">
+      <Stack.Navigator initialRouteName="profilesetup">
         <Stack.Screen
           name="Signup"
           component={SignupScreen}
@@ -47,6 +51,30 @@ const App = () => {
         <Stack.Screen
           name="profile"
           component={Profilepage}
+          options={{ headerShown: false }}
+          
+        />
+        <Stack.Screen
+          name="profilesetup"
+          component={Profilesetup1}
+          options={{ headerShown: false }}
+          
+        />
+        <Stack.Screen
+          name="profsetuppage"
+          component={ProfileSetuppage}
+          options={{ headerShown: false }}
+          
+        />
+        <Stack.Screen
+          name="educationpage"
+          component={Educational}
+          options={{ headerShown: false }}
+          
+        />
+        <Stack.Screen
+          name="professionalpage"
+          component={Professional}
           options={{ headerShown: false }}
           
         />
