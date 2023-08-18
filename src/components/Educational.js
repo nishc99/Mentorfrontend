@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, TextInput, ScrollView, StyleSheet } from 'react-native';
+import { useNavigation} from '@react-navigation/native';
 
 const Educational = () => {
+  const navigation = useNavigation();
 
   return (
-    <ScrollView style={styles.topeducationcontainer}>
+    <View style={styles.topeducationcontainer}>
       <View style={styles.educationheader}>
         <Image source={require('./Profimg/BackButton.png')} style={styles.educationimage1}  />
         <Text style={styles.educationheaderText}>Profile Setup</Text>
@@ -25,13 +27,13 @@ const Educational = () => {
         <Image source={require('./Profimg/border_color.png')} style={styles.educationimage7} />
       </View>
       <View style={styles.educationbox1}>
-        <TouchableOpacity onPress={() => console.log('Image clicked')}>
+        <TouchableOpacity>
           <Image source={require('./Profimg/add.png')} style={styles.educationimage8} />
         </TouchableOpacity>
         <Text style={styles.addEducationText}>Add Education</Text>
       </View>
       </View>
-    </ScrollView>
+    </View>
   );
 }
 
@@ -43,7 +45,7 @@ const styles = StyleSheet.create({
   containereducation: {
     flex: 1,
     padding: 32,
-    marginLeft: -15,
+    marginLeft: -8,
     marginTop: 170
   },
   educationheader: {

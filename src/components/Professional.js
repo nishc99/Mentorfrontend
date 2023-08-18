@@ -4,11 +4,11 @@ import { View, Text, Image, TouchableOpacity, TextInput, ScrollView, StyleSheet 
 const Professional = () => {
 
   return (
-    <ScrollView style={styles.topprofessionalcontainer}>
+    <View style={styles.topprofessionalcontainer}>
       <View style={styles.professionalheader}>
       
         <Image source={require('./Profimg/BackButton.png')} style={styles.professionalimage1} />
-        <Text style={styles.headerText}>Profile Setup</Text>
+        <Text style={styles.professionalheaderText}>Profile Setup</Text>
       </View>
      
       <View style={styles.professionalcontainer}>
@@ -27,7 +27,7 @@ const Professional = () => {
         <Text style={styles.professionaladdExperienceText}>Add Experience</Text>
       </View>
       </View>
-    </ScrollView>
+    </View>
   );
 }
 
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
   professionalcontainer: {
     flex: 1,
     padding: 32,
-    marginLeft: -15,
+    marginLeft: -8,
     marginTop: 270
   },
   professionalimage1: {
