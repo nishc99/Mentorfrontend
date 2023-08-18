@@ -27,7 +27,7 @@ const Educational = () => {
         <Image source={require('./Profimg/border_color.png')} style={styles.educationimage7} />
       </View>
       <View style={styles.educationbox1}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('addeducationpage')}>
           <Image source={require('./Profimg/add.png')} style={styles.educationimage8} />
         </TouchableOpacity>
         <Text style={styles.addEducationText}>Add Education</Text>

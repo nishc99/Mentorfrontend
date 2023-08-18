@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity, TextInput, ScrollView, StyleSheet } from 'react-native';
+import { useNavigation} from '@react-navigation/native';
 
 const Professional = () => {
+  const navigation = useNavigation();
 
   return (
     <View style={styles.topprofessionalcontainer}>
@@ -21,7 +23,7 @@ const Professional = () => {
       </View>
      
       <View style={styles.professionalboxprofessional}>
-        <TouchableOpacity onPress={() => console.log('Image clicked')}>
+        <TouchableOpacity onPress={() => navigation.navigate('addexperiencepage')}>
           <Image source={require('./Profimg/add.png')} style={styles.professionalimage8} />
         </TouchableOpacity>
         <Text style={styles.professionaladdExperienceText}>Add Experience</Text>

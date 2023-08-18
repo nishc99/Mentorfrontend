@@ -11,6 +11,9 @@ import Profilesetup1 from './src/components/Profilesetup1';
 import ProfileSetuppage from './src/components/ProfileSetuppage';
 import Educational from './src/components/Educational';
 import Professional from './src/components/Professional';
+import AddEducation from './src/components/AddEducation';
+import AddExperience from './src/components/AddExperience';
+
 
 const Stack = createStackNavigator();
 
@@ -75,6 +78,18 @@ const App = () => {
         <Stack.Screen
           name="professionalpage"
           component={Professional}
+          options={{ headerShown: false }}
+          
+        />
+        <Stack.Screen
+          name="addeducationpage"
+          component={AddEducation}
+          options={{ headerShown: false }}
+          
+        />
+        <Stack.Screen
+          name="addexperiencepage"
+          component={AddExperience}
           options={{ headerShown: false }}
           
         />

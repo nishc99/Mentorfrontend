@@ -31,7 +31,7 @@ const Profilesetup1 = () => {
           >
             <Image
               style={styles.logo}
-              source={require('./logimg/lock.png')}
+              source={require('./Profimg/account.png')}
             />
           </TouchableOpacity>
           <TouchableOpacity
@@ -43,7 +43,7 @@ const Profilesetup1 = () => {
           >
             <Image
               style={styles.logo}
-              source={require('./logimg/lock.png')}
+              source={require('./Profimg/school.png')}
             />
           </TouchableOpacity>
           <TouchableOpacity
@@ -55,7 +55,7 @@ const Profilesetup1 = () => {
           >
             <Image
               style={styles.logo}
-              source={require('./logimg/lock.png')}
+              source={require('./Profimg/apartment.png')}
             />
           </TouchableOpacity>
         </View>
@@ -133,7 +133,7 @@ nextButton: {
     borderRadius: 40,
     top: 740,
     alignItems: 'center',
-    marginLeft:110,
+    left:110,
   },
   buttonText: {
     color: ' #7B7A7C',

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet ,  Modal, FlatList } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet ,  Modal, FlatList, ScrollView } from 'react-native';
 
 const ProfileSetuppage = () => {
   const [username, setUsername] = useState('');
@@ -70,15 +70,8 @@ const ProfileSetuppage = () => {
               </TouchableOpacity>
             )}
           />
-          <TouchableOpacity
-            style={styles.profiledropdownCancel}
-            onPress={() => setIsSkillsDropdownVisible(false)}
-          >
-            <Text>Cancel</Text>
-          </TouchableOpacity>
         </View>
       </Modal>
-
 
       <Text style={styles.profilelabel}>Bio</Text>
       <TextInput
@@ -215,7 +208,7 @@ const styles =
     height: 40,
     borderWidth: 1,
     borderColor: '#7B7A7C',
-    color: 'rgba(123, 122, 124, 0.50)',
+    color:'#7B7A7C',
     borderRadius: 11,
     padding: 10,
     marginTop: 5,
@@ -223,28 +216,24 @@ const styles =
   },
 
   profileskillstext: {
-    color: 'rgba(123, 122, 124, 0.50)',  
+    color:'#7B7A7C',  
   },
   
   profiledropdownContainer: {
     flex: 1,
     justifyContent: 'flex-end',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    marginTop:370,
-    width:350,
-    marginLeft:50,
+    // backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    marginTop:480,
+    width:250,
+    height: 163,
+    marginLeft:40,
   },
   profiledropdownItem: {
-    backgroundColor: '#fff',
+    backgroundColor: '#F3F3F3',
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
-  },
-  profiledropdownCancel: {
-    backgroundColor: '#fff',
-    paddingVertical: 10,
-    paddingHorizontal: 20,
   },
 });
 
